@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.IntentSender;
 import android.content.pm.PackageManager;
 import android.location.Location;
+import android.os.AsyncTask;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +13,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -25,6 +27,9 @@ import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.location.LocationSettingsRequest;
 import com.google.android.gms.location.LocationSettingsResult;
 import com.google.android.gms.location.LocationSettingsStatusCodes;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity
         implements GoogleApiClient.OnConnectionFailedListener,
@@ -41,7 +46,7 @@ public class MainActivity extends AppCompatActivity
     private TextView lblLatitud;
     private TextView lblLongitud;
     private ToggleButton btnActualizar;
-
+    String lat,lon;
     private LocationRequest locRequest;
 
     @Override
@@ -78,8 +83,8 @@ public class MainActivity extends AppCompatActivity
     private void enableLocationUpdates() {
 
         locRequest = new LocationRequest();
-        locRequest.setInterval(2000);
-        locRequest.setFastestInterval(1000);
+        locRequest.setInterval(5000);
+        locRequest.setFastestInterval(5000);
         locRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
 
         LocationSettingsRequest locSettingsRequest =
@@ -180,6 +185,9 @@ public class MainActivity extends AppCompatActivity
         if (loc != null) {
             lblLatitud.setText("Latitud: " + String.valueOf(loc.getLatitude()));
             lblLongitud.setText("Longitud: " + String.valueOf(loc.getLongitude()));
+            lat=String.valueOf(loc.getLatitude());
+            lon= String.valueOf(loc.getLongitude());
+            new mandarLoc().execute();
         } else {
             lblLatitud.setText("Latitud: (desconocida)");
             lblLongitud.setText("Longitud: (desconocida)");
@@ -233,5 +241,49 @@ public class MainActivity extends AppCompatActivity
 
         //Mostramos la nueva ubicación recibida
         updateUI(location);
+    }
+
+
+    class mandarLoc extends AsyncTask<String, String, String> {
+
+        /**
+         * Before starting background thread Show Progress Dialog
+         * */
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+
+        }
+
+        /**
+         * getting Albums JSON
+         * */
+        protected String doInBackground(String... args) {
+            // Building Parameters
+            //add your data
+            //add your data
+            JSONParse jsp= new JSONParse();
+
+            //String body= "{\r\n\"contrasena\": \""+txtPass.getText()+"\",\r\n\"telefono\": \""+txtTel.getText()+"\"\r\n}\r\n";
+            String body= "{\n\"id\" : \"3\",\n\"lat\" : \""+lat+"\",\n\"lon\" : \""+lon+"\"\n}";
+            String respuesta= jsp.makeHttpRequest("http://thea.devworms.com/api/usuarios/trackup","POST",body,"");
+            Log.d("Respuesta : ", "> " + respuesta);
+            if(respuesta!="error") {
+
+
+            }
+            else{}
+            return null;
+        }
+
+
+        /**
+         * After completing background task Dismiss the progress dialog
+         * **/
+        protected void onPostExecute(String file_url) {
+            // dismiss the dialog after getting all albums
+
+
+        }
     }
 }
