@@ -1,6 +1,7 @@
 package com.devworms.salva.thea;
 import android.Manifest;
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.content.pm.PackageManager;
@@ -14,8 +15,10 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.view.ContextThemeWrapper;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
@@ -58,10 +61,31 @@ public class MainActivity extends AppCompatActivity{
     }
 
     public void abrirChat(View view){
-
+        Intent intent = new Intent(MainActivity.this, ChatActivity.class);
+        startActivity(intent);
     }
 
     public void pedirAyuda(View view){
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(new ContextThemeWrapper(this, R.style.myDialog));
 
+
+        // set title
+        alertDialogBuilder.setTitle("Ayuda");
+
+        // set dialog message
+        alertDialogBuilder
+                .setMessage("Hemos mandado los datos de su ubicación, la ayuda va en camino")
+                .setCancelable(false)
+                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+
+                    }
+                });
+
+        // create alert dialog
+        AlertDialog alertDialog = alertDialogBuilder.create();
+
+        // show it
+        alertDialog.show();
     }
 }

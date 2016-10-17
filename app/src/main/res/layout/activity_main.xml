@@ -73,7 +73,7 @@
                         android:layout_width="wrap_content"
                         android:scaleType="centerCrop"
                         android:src="@drawable/app_directory"
-
+                        android:onClick="abrirChat"
                         android:layout_marginBottom="15dp"
                         android:layout_marginEnd="15dp" />
 
@@ -95,6 +95,7 @@
                         android:layout_width="wrap_content"
                         android:scaleType="centerCrop"
                         android:src="@drawable/app_thea"
+                        android:onClick="pedirAyuda"
                         android:layout_marginBottom="15dp"
                         android:layout_marginEnd="15dp" />
 
