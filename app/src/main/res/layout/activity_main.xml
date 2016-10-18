@@ -31,7 +31,8 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_gravity="center_horizontal|center_vertical"
-            android:gravity="center_vertical|center_horizontal">
+            android:gravity="center_vertical|center_horizontal"
+            android:weightSum="1">
 
 
             <GridLayout
@@ -103,13 +104,15 @@
                         android:layout_width="match_parent"
 
                         android:layout_height="match_parent"
-                        android:text="¡Ayuda!"
+                        android:text="Panico"
                         android:textColor="#ffff"
-                        android:gravity="center_horizontal" />
+                        android:gravity="center_horizontal"
+                        android:id="@+id/txtPanic" />
                 </LinearLayout>
 
             </GridLayout>
-    </LinearLayout>
+
+        </LinearLayout>
     </LinearLayout>
 
 
