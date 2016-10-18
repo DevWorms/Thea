@@ -55,35 +55,24 @@
                 <li class="sidebar-brand">
                     <a href="index.php"><img src="logo.png"></a>
                 </li>
-<<<<<<< HEAD
-               <li>
+                <li>
                     <a href="index.php">Mapa</a>
                 </li>
                 <li>
                      <a href="quejas.php">Comentarios y quejas</a>
+               
                 </li>
                 <li>
-                    <a href="ubicar.php">Operadores</a>
+                    <a href="ubicar.php">Ubicar Conductor</a>
                 </li>
                 <li>
-                    <a href="#">Estadisticas</a>
-                </li>
-=======
-                <li>
-                    <a href="mapa.php">Ubicar Conductor</a>
+                    <a href="#">Camaras</a>
                 </li>
                 <li>
-                    <a href="#">Conversaciones</a>
-                </li>
-                <li>
-                    <a href="panel.php">Panel de Control</a>
-                </li>              
->>>>>>> origin/master
+                    <a href="panel.php">Estadisticas</a>
+                </li>            
                 <li>
                     <a href="panico.php">Alerta de Pánico</a>
-                </li>
-                <li>
-                    <a href="botonpanico.php">Botones de panico</a>
                 </li>
                 <li>
                     <a href="#">Ayuda</a>

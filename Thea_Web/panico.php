@@ -56,14 +56,21 @@
                     <a href="index.php"><img src="logo.png"></a>
                 </li>
                 <li>
-                    <a href="mapa.php">Ubicar Conductor</a>
+                    <a href="index.php">Mapa</a>
                 </li>
                 <li>
-                    <a href="#">Conversaciones</a>
+                     <a href="quejas.php">Comentarios y quejas</a>
+               
                 </li>
                 <li>
-                    <a href="panel.php">Panel de Control</a>
-                </li>                
+                    <a href="ubicar.php">Ubicar Conductor</a>
+                </li>
+                <li>
+                    <a href="#">Camaras</a>
+                </li>
+                <li>
+                    <a href="panel.php">Estadisticas</a>
+                </li>            
                 <li>
                     <a href="panico.php">Alerta de Pánico</a>
                 </li>

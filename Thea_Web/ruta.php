@@ -39,23 +39,24 @@
                         THEA
                     </a>
                 </li>
-                <li>
+                 <li>
                     <a href="index.php">Mapa</a>
                 </li>
                 <li>
                      <a href="quejas.php">Comentarios y quejas</a>
+               
                 </li>
                 <li>
-                    <a href="ubicar.php">Operadores</a>
-                </li>
-                <li>
-                    <a href="#">Estadisticas</a>
+                    <a href="ubicar.php">Ubicar Conductor</a>
                 </li>
                 <li>
                     <a href="#">Camaras</a>
                 </li>
                 <li>
-                    <a href="botonpanico.php">Botones de panico</a>
+                    <a href="panel.php">Estadisticas</a>
+                </li>            
+                <li>
+                    <a href="panico.php">Alerta de Pánico</a>
                 </li>
                 <li>
                     <a href="#">Ayuda</a>

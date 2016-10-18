@@ -65,7 +65,7 @@
                                                 <h4><b>' . $fila["nombre_usuario"] . '</b></h4>
                                                 <p>Placas: ' . $fila["placas_usuario"] . '</p>
                                                 <p>
-<<<<<<< HEAD
+
                                                     Latitud: ' . $fila["latitud_usuario"] . '<br>
                                                     Longitud: ' . $fila["longitud_usuario"] . '<br>
                                                     Numero de pasajeros: ' . ($counter*3) . ' <br>
@@ -73,16 +73,13 @@
                                                      <br>
                                                     Consumo de gasolina: ' . "14 km por litro" . '
                                                     <br>
-                                                    Calificacion: ' . "3 estrellas" . '
-
-
-=======
+                                                    
                                                     Calificación: <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
 
                                                     <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
 
                                                     <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
->>>>>>> origin/master
+
                                                 </p>
                                                 <a href="mapa.php?lat=' . $fila["latitud_usuario"] . '&long=' . $fila["longitud_usuario"] . '" target=_blank>Mostrar en mapa</a>
                                               </div>

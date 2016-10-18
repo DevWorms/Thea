@@ -44,33 +44,23 @@
                     <img src="logo.png">
                 </li>
                 <li>
-<<<<<<< HEAD
                     <a href="index.php">Mapa</a>
                 </li>
                 <li>
                      <a href="quejas.php">Comentarios y quejas</a>
+               
                 </li>
                 <li>
-                    <a href="ubicar.php">Operadores</a>
-                </li>
-                <li>
-                    <a href="#">Estadisticas</a>
-                </li>
-=======
                     <a href="ubicar.php">Ubicar Conductor</a>
                 </li>
                 <li>
-                    <a href="#">Conversaciones</a>
+                    <a href="#">Camaras</a>
                 </li>
                 <li>
-                    <a href="panel.php">Panel de Control</a>
+                    <a href="panel.php">Estadisticas</a>
                 </li>            
->>>>>>> origin/master
                 <li>
                     <a href="panico.php">Alerta de Pánico</a>
-                </li>
-                <li>
-                    <a href="botonpanico.php">Botones de panico</a>
                 </li>
                 <li>
                     <a href="#">Ayuda</a>
