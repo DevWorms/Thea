@@ -7,4 +7,5 @@
     <string name="longitud">Longitud:</string>
     <string name="parar_actualizaciones">Parar Actualizaciones</string>
     <string name="iniciar_actualizaciones">Iniciar Actualizaciones</string>
+    <string name="title_activity_maps">Map</string>
 </resources>

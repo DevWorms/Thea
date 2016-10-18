@@ -44,6 +44,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import static com.devworms.salva.thea.R.styleable.AlertDialog;
+import static com.devworms.salva.thea.R.styleable.View;
 
 public class MainActivity extends AppCompatActivity{
     String act = "0";
@@ -59,7 +60,7 @@ public class MainActivity extends AppCompatActivity{
 
 
     public void abrirMapa(View view){
-        Intent intent = new Intent(MainActivity.this, FragmentPosicion.class);
+        Intent intent = new Intent(MainActivity.this, MapsActivity.class);
         startActivity(intent);
 
     }
@@ -123,8 +124,8 @@ public class MainActivity extends AppCompatActivity{
             JSONParse jsp= new JSONParse();
 
             //String body= "{\r\n\"contrasena\": \""+txtPass.getText()+"\",\r\n\"telefono\": \""+txtTel.getText()+"\"\r\n}\r\n";
-            String body= "{\n\t\"id\" : \"1\",\n\t\"panico\" : \"0\"\n}";
-            String respuesta= jsp.makeHttpRequest("http://thea.devworms.com/api/usuarios/trackup","POST",body,"");
+            String body= "{\n\t\"id\" : \"1\",\n\t\"panico\" : \""+act+"\"\n}";
+            String respuesta= jsp.makeHttpRequest("http://thea.devworms.com/api/usuarios/panico","POST",body,"");
             Log.d("Respuesta : ", "> " + respuesta);
             if(respuesta!="error") {
 
