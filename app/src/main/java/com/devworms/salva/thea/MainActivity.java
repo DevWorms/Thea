@@ -23,6 +23,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
@@ -42,15 +43,18 @@ import com.google.android.gms.location.LocationSettingsStatusCodes;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class MainActivity extends AppCompatActivity{
+import static com.devworms.salva.thea.R.styleable.AlertDialog;
 
+public class MainActivity extends AppCompatActivity{
+    String act = "0";
+    TextView btnPacnico;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        btnPacnico= (TextView) findViewById(R.id.txtPanic);
     }
 
 
@@ -65,8 +69,9 @@ public class MainActivity extends AppCompatActivity{
         startActivity(intent);
     }
 
+
     public void pedirAyuda(View view){
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(new ContextThemeWrapper(this, R.style.myDialog));
+       /* AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(new ContextThemeWrapper(this, R.style.myDialog));
 
 
         // set title
@@ -86,6 +91,57 @@ public class MainActivity extends AppCompatActivity{
         AlertDialog alertDialog = alertDialogBuilder.create();
 
         // show it
-        alertDialog.show();
+        alertDialog.show(); */
+        if(act.equals("0")){
+            act="1";
+            btnPacnico.setText("Activado");
+        }else{
+            act="0";
+            btnPacnico.setText("Panico");
+        }
+        new panicoSend().execute();
+    }
+
+    class panicoSend extends AsyncTask<String, String, String> {
+
+        /**
+         * Before starting background thread Show Progress Dialog
+         * */
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+
+        }
+
+        /**
+         * getting Albums JSON
+         * */
+        protected String doInBackground(String... args) {
+            // Building Parameters
+            //add your data
+            //add your data
+            JSONParse jsp= new JSONParse();
+
+            //String body= "{\r\n\"contrasena\": \""+txtPass.getText()+"\",\r\n\"telefono\": \""+txtTel.getText()+"\"\r\n}\r\n";
+            String body= "{\n\t\"id\" : \"1\",\n\t\"panico\" : \"0\"\n}";
+            String respuesta= jsp.makeHttpRequest("http://thea.devworms.com/api/usuarios/trackup","POST",body,"");
+            Log.d("Respuesta : ", "> " + respuesta);
+            if(respuesta!="error") {
+
+
+            }
+            else{}
+            return null;
+        }
+
+
+        /**
+         * After completing background task Dismiss the progress dialog
+         * **/
+        protected void onPostExecute(String file_url) {
+            // dismiss the dialog after getting all albums
+
+
+        }
     }
 }
