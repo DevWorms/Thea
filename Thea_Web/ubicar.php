@@ -52,14 +52,26 @@
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href="index.php"><img src="logo.png"></a>
+                 <li class="sidebar-brand">
+                    <img src="logo.png">
                 </li>
                 <li>
-                    <a href="mapa.php">Ubicar Conductor</a>
+                    <a href="ubicar.php">Mapa</a>
                 </li>
                 <li>
-                    <a href="#">Conversaciones</a>
+                    <a href="#">Comentarios y quejas</a>
+                </li>
+                <li>
+                    <a href="#">Distancia</a>
+                </li>
+                <li>
+                    <a href="#">Operadores</a>
+                </li>
+                <li>
+                    <a href="#">Estadisticas</a>
+                </li>
+                <li>
+                    <a href="#">Camaras</a>
                 </li>
                 <li>
                     <a href="#">Ayuda</a>
