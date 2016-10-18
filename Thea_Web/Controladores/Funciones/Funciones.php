@@ -82,6 +82,8 @@
 
                                                 </p>
                                                 <a href="mapa.php?lat=' . $fila["latitud_usuario"] . '&long=' . $fila["longitud_usuario"] . '" target=_blank>Mostrar en mapa</a>
+                                                </p>
+                                                <a href="camara.php">Mostrar Cámara</a>
                                               </div>
                                             </div><br>';
 

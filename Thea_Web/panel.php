@@ -52,9 +52,6 @@
                     <a href="ubicar.php">Ubicar Conductor</a>
                 </li>
                 <li>
-                    <a href="#">Camaras</a>
-                </li>
-                <li>
                     <a href="panel.php">Estadisticas</a>
                 </li>            
                 <li>
