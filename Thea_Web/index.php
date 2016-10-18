@@ -1,7 +1,5 @@
             
-                <li>
-                    <a href="panico.php">Alerta de Pánico</a>
-                </li><!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   
 <head>
@@ -37,11 +35,10 @@
 
     <div id="wrapper">
 
-        <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                    <img src="logo.png">
+                    <a href="index.php"><img src="logo.png"></a>
                 </li>
                 <li>
                     <a href="index.php">Mapa</a>
@@ -67,8 +64,6 @@
                 </li>
             </ul>
         </div>
-    </div>
-
 
 
 
