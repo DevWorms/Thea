@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+            
+                <li>
+                    <a href="panico.php">Alerta de Pánico</a>
+                </li><!DOCTYPE html>
 <html>
   
 <head>
@@ -38,22 +41,16 @@
                     <img src="logo.png">
                 </li>
                 <li>
-                    <a href="ubicar.php">Mapa</a>
+                    <a href="ubicar.php">Ubicar Conductor</a>
                 </li>
                 <li>
-                    <a href="#">Comentarios y quejas</a>
+                    <a href="#">Conversaciones</a>
                 </li>
                 <li>
-                    <a href="#">Distancia</a>
-                </li>
+                    <a href="panel.php">Panel de Control</a>
+                </li>            
                 <li>
-                    <a href="#">Operadores</a>
-                </li>
-                <li>
-                    <a href="#">Estadisticas</a>
-                </li>
-                <li>
-                    <a href="#">Camaras</a>
+                    <a href="panico.php">Alerta de Pánico</a>
                 </li>
                 <li>
                     <a href="#">Ayuda</a>

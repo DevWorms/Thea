@@ -52,26 +52,20 @@
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
-                 <li class="sidebar-brand">
-                    <img src="logo.png">
+                <li class="sidebar-brand">
+                    <a href="index.php"><img src="logo.png"></a>
                 </li>
                 <li>
-                    <a href="ubicar.php">Mapa</a>
+                    <a href="mapa.php">Ubicar Conductor</a>
                 </li>
                 <li>
-                    <a href="#">Comentarios y quejas</a>
+                    <a href="#">Conversaciones</a>
                 </li>
                 <li>
-                    <a href="#">Distancia</a>
-                </li>
+                    <a href="panel.php">Panel de Control</a>
+                </li>              
                 <li>
-                    <a href="#">Operadores</a>
-                </li>
-                <li>
-                    <a href="#">Estadisticas</a>
-                </li>
-                <li>
-                    <a href="#">Camaras</a>
+                    <a href="panico.php">Alerta de Pánico</a>
                 </li>
                 <li>
                     <a href="#">Ayuda</a>

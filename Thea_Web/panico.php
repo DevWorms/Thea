@@ -1,3 +1,6 @@
+<?php 
+  require_once 'Controladores/Funciones/Funciones.php';
+?>
 <!DOCTYPE html>
 <html>
   
@@ -11,6 +14,7 @@
 
     <title>Simple Sidebar - Start Bootstrap Template</title>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -25,6 +29,20 @@
       #map {
         height: 100%;
       }
+
+      .card {
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+          transition: 0.3s;
+          width: 15%;
+      }
+
+      .card:hover {
+          box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      }
+
+      .container {
+          padding: 2px 16px;
+      }
     </style>
   </head>
   <body>
@@ -35,17 +53,17 @@
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                    <img src="logo.png">
+                    <a href="index.php"><img src="logo.png"></a>
                 </li>
                 <li>
-                    <a href="ubicar.php">Ubicar Conductor</a>
+                    <a href="mapa.php">Ubicar Conductor</a>
                 </li>
                 <li>
                     <a href="#">Conversaciones</a>
                 </li>
                 <li>
                     <a href="panel.php">Panel de Control</a>
-                </li>              
+                </li>                
                 <li>
                     <a href="panico.php">Alerta de Pánico</a>
                 </li>
@@ -54,35 +72,58 @@
                 </li>
             </ul>
         </div>
+    
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+                    <div id="div1">
+                      CARGANDO...
+                    </div>
+
+                    </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
     </div>
 
 
+    
+    <script type="text/javascript">
 
 
+      function initMap()  {
 
-
-    <div id="map"></div>
-    <script>
-      // This example adds an animated symbol to a polyline.
-
-
-      function initMap() {
-
-        var myLatLng = {lat: <?php echo $_GET["lat"]; ?>, lng: <?php echo $_GET["long"]; ?>};
+        var myLatLng = {lat: 19.2961467, lng: -99.0525917};
 
         var map = new google.maps.Map(document.getElementById('map'), {
-          center: myLatLng,
           zoom: 16,
-          styles: [{"stylers":[{"hue":"#dd0d0d"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"on"}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":100},{"visibility":"simplified"}]}]
+          center: myLatLng,
+          styles: [{"stylers":[{"hue":"#dd0d0d"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":100},{"visibility":"simplified"}]}]
         });
 
-        var marker = new google.maps.Marker({
-                                              position: myLatLng,
-                                              map: map
-                                            });
+
+        <?php
+          echo MostrarAutos();
+        ?>
+      }
+    
+    </script>
+    
+    
+    <script type="text/javascript">
+
+      function markers()  {
+        $(document).ready(function(){
+              $("#div1").load("demo_test2.php");
+        });      
       }
 
+      setInterval( "markers()", 1500 );
+
     </script>
+
+
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBuFoiWmY9hbgVbhR0kboLuUQIVK85Y8U&callback=initMap"
         async defer></script>
   </body>
