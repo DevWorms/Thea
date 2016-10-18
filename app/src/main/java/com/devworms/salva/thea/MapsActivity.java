@@ -3,6 +3,7 @@ package com.devworms.salva.thea;
 import android.content.Context;
 import android.location.Geocoder;
 import android.location.Location;
+import android.os.AsyncTask;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
@@ -66,6 +67,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             return;
         }
         mMap.setMyLocationEnabled(true);
+        new mandarLoc().execute();
        // Location loc= LocationServices.FusedLocationApi.getLastLocation(apiClient);
 
          //This goes up to 21
@@ -79,6 +81,48 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         if (loc != null) {
 
         } else {
+
+        }
+    }
+    class mandarLoc extends AsyncTask<String, String, String> {
+
+        /**
+         * Before starting background thread Show Progress Dialog
+         * */
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+
+        }
+
+        /**
+         * getting Albums JSON
+         * */
+        protected String doInBackground(String... args) {
+            // Building Parameters
+            //add your data
+            //add your data
+            JSONParse jsp= new JSONParse();
+
+            //String body= "{\r\n\"contrasena\": \""+txtPass.getText()+"\",\r\n\"telefono\": \""+txtTel.getText()+"\"\r\n}\r\n";
+            String body= "{\n\"id\" : \"1\",\n\"lat\" : \""+lat+"\",\n\"lon\" : \""+lon+"\"\n}";
+            String respuesta= jsp.makeHttpRequest("http://thea.devworms.com/api/usuarios/trackup","POST",body,"");
+            Log.d("Respuesta : ", "> " + respuesta);
+            if(respuesta!="error") {
+
+
+            }
+            else{}
+            return null;
+        }
+
+
+        /**
+         * After completing background task Dismiss the progress dialog
+         * **/
+        protected void onPostExecute(String file_url) {
+            // dismiss the dialog after getting all albums
+
 
         }
     }
