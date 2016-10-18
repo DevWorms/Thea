@@ -55,7 +55,7 @@
                  <li class="sidebar-brand">
                     <img src="logo.png">
                 </li>
-               <li>
+                <li>
                     <a href="index.php">Mapa</a>
                 </li>
                 <li>
@@ -83,8 +83,46 @@
 
         <!-- Page Content -->
         <div id="page-content-wrapper">
+        <H1>Mandar ayuda inmediata</H1>
                     <div id="div1">
-                      CARGANDO...
+                      <table class="table table-inverse">
+					  <thead>
+					    <tr>
+					      <th>#</th>
+					      <th>Chofer</th>
+					      <th>Placas</th>
+                <th>Ubicación</th>
+                <th>Fecha y hora</th>
+					    </tr>
+					  </thead>
+					  <tbody>
+					    <tr>
+					      <th scope="row">1</th>
+					      <td>User 1</td>
+					      
+					      <td>297AEN</td>
+					      <td><a href="mapa.php?lat=19.2959&long=-99.0526" target=_blank>Mostrar en mapa</a></td>
+                <td>18/Octubre/2016 11:00 AM</td>
+					    </tr>
+					    <tr>
+					      <th scope="row">2</th>
+					      <td>User 1</td>
+					     
+					      <td>297AEN</td>
+					      <td><a href="mapa.php?lat=19.4093&long=-99.0357" target=_blank>Mostrar en mapa</a></td>
+                <td>17/Octubre/2016 10:00 AM</td>
+					    </tr>
+					    <tr>
+					      <th scope="row">3</th>
+					      <td>User 2</td>
+					     
+					      <td>108GTR</td>
+					      <td><a href="mapa.php?lat=19.288&long=-99.0491" target=_blank>Mostrar en mapa</a></td>
+                <td>17/Octubre/2016 11:00 AM</td>
+					    </tr>
+					    
+					  </tbody>
+					</table>
                     </div>
 
                     </div>
@@ -94,43 +132,6 @@
     </div>
 
 
-    
-    <script type="text/javascript">
-
-
-      function initMap()  {
-
-        var myLatLng = {lat: 19.2961467, lng: -99.0525917};
-
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 16,
-          center: myLatLng,
-          styles: [{"stylers":[{"hue":"#dd0d0d"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":100},{"visibility":"simplified"}]}]
-        });
-
-
-        <?php
-          echo MostrarAutos();
-        ?>
-      }
-    
-    </script>
-    
-    
-    <script type="text/javascript">
-
-      function markers()  {
-        $(document).ready(function(){
-              $("#div1").load("demo_test.php");
-        });      
-      }
-
-      setInterval( "markers()", 1500 );
-
-    </script>
-
-
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBuFoiWmY9hbgVbhR0kboLuUQIVK85Y8U&callback=initMap"
-        async defer></script>
+   
   </body>
 </html>

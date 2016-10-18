@@ -40,25 +40,25 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">Dashboard</a>
+                    <a href="index.php">Mapa</a>
                 </li>
                 <li>
-                    <a href="#">Shortcuts</a>
+                     <a href="quejas.php">Comentarios y quejas</a>
                 </li>
                 <li>
-                    <a href="#">Overview</a>
+                    <a href="ubicar.php">Operadores</a>
                 </li>
                 <li>
-                    <a href="#">Events</a>
+                    <a href="#">Estadisticas</a>
                 </li>
                 <li>
-                    <a href="#">About</a>
+                    <a href="#">Camaras</a>
                 </li>
                 <li>
-                    <a href="#">Services</a>
+                    <a href="botonpanico.php">Botones de panico</a>
                 </li>
                 <li>
-                    <a href="#">Contact</a>
+                    <a href="#">Ayuda</a>
                 </li>
             </ul>
         </div>

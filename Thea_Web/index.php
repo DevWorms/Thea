@@ -14,6 +14,7 @@
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
+            
     <!-- Custom CSS -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
     <style>
@@ -25,6 +26,8 @@
       #map {
         height: 100%;
       }
+
+      
     </style>
   </head>
   <body>
@@ -38,22 +41,22 @@
                     <img src="logo.png">
                 </li>
                 <li>
-                    <a href="ubicar.php">Mapa</a>
+                    <a href="index.php">Mapa</a>
                 </li>
                 <li>
-                    <a href="#">Comentarios y quejas</a>
+                     <a href="quejas.php">Comentarios y quejas</a>
                 </li>
                 <li>
-                    <a href="#">Distancia</a>
-                </li>
-                <li>
-                    <a href="#">Operadores</a>
+                    <a href="ubicar.php">Operadores</a>
                 </li>
                 <li>
                     <a href="#">Estadisticas</a>
                 </li>
                 <li>
                     <a href="#">Camaras</a>
+                </li>
+                <li>
+                    <a href="botonpanico.php">Botones de panico</a>
                 </li>
                 <li>
                     <a href="#">Ayuda</a>

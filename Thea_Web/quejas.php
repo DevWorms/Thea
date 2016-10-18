@@ -55,7 +55,7 @@
                  <li class="sidebar-brand">
                     <img src="logo.png">
                 </li>
-               <li>
+                <li>
                     <a href="index.php">Mapa</a>
                 </li>
                 <li>
@@ -70,7 +70,7 @@
                 <li>
                     <a href="#">Camaras</a>
                 </li>
-                <li>
+               <li>
                     <a href="botonpanico.php">Botones de panico</a>
                 </li>
                 <li>
@@ -83,8 +83,49 @@
 
         <!-- Page Content -->
         <div id="page-content-wrapper">
+        <H1>Quejas y sugerencias de los usuarios</H1>
                     <div id="div1">
-                      CARGANDO...
+                      <table class="table table-inverse">
+					  <thead>
+					    <tr>
+					      <th>#</th>
+					      <th>Chofer</th>
+					    
+					      <th>Placas</th>
+					      <th>Queja o sugerencia</th>
+					    </tr>
+					  </thead>
+					  <tbody>
+					    <tr>
+					      <th scope="row">1</th>
+					      <td>User 1</td>
+					      
+					      <td>297AEN</td>
+					      <td>Este camión va a exceso de velocidad</td>
+					    </tr>
+					    <tr>
+					      <th scope="row">2</th>
+					      <td>User 1</td>
+					     
+					      <td>297AEN</td>
+					      <td>El chofer insulto a la gente</td>
+					    </tr>
+					    <tr>
+					      <th scope="row">3</th>
+					      <td>User 2</td>
+					     
+					      <td>108GTR</td>
+					      <td>Este camión esta en muy mal estado</td>
+					    </tr>
+					    <tr>
+					      <th scope="row">4</th>
+					      <td>User 3</td>
+					     
+					      <td>RVR9745</td>
+					      <td>Muy buen servicio</td>
+					    </tr>
+					  </tbody>
+					</table>
                     </div>
 
                     </div>
@@ -94,43 +135,6 @@
     </div>
 
 
-    
-    <script type="text/javascript">
-
-
-      function initMap()  {
-
-        var myLatLng = {lat: 19.2961467, lng: -99.0525917};
-
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 16,
-          center: myLatLng,
-          styles: [{"stylers":[{"hue":"#dd0d0d"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":100},{"visibility":"simplified"}]}]
-        });
-
-
-        <?php
-          echo MostrarAutos();
-        ?>
-      }
-    
-    </script>
-    
-    
-    <script type="text/javascript">
-
-      function markers()  {
-        $(document).ready(function(){
-              $("#div1").load("demo_test.php");
-        });      
-      }
-
-      setInterval( "markers()", 1500 );
-
-    </script>
-
-
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBuFoiWmY9hbgVbhR0kboLuUQIVK85Y8U&callback=initMap"
-        async defer></script>
+   
   </body>
 </html>
