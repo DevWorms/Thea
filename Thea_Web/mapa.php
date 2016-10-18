@@ -56,6 +56,12 @@
                     <a href="botonpanico.php">Botones de panico</a>
                 </li>
                 <li>
+                    <a href="panel.php">Panel de Control</a>
+                </li>              
+                <li>
+                    <a href="panico.php">Alerta de Pánico</a>
+                </li>
+                <li>
                     <a href="#">Ayuda</a>
                 </li>
             </ul>

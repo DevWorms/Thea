@@ -55,20 +55,6 @@
                 <li class="sidebar-brand">
                     <a href="index.php"><img src="logo.png"></a>
                 </li>
-<<<<<<< HEAD
-               <li>
-                    <a href="index.php">Mapa</a>
-                </li>
-                <li>
-                     <a href="quejas.php">Comentarios y quejas</a>
-                </li>
-                <li>
-                    <a href="ubicar.php">Operadores</a>
-                </li>
-                <li>
-                    <a href="#">Estadisticas</a>
-                </li>
-=======
                 <li>
                     <a href="mapa.php">Ubicar Conductor</a>
                 </li>
@@ -77,13 +63,9 @@
                 </li>
                 <li>
                     <a href="panel.php">Panel de Control</a>
-                </li>              
->>>>>>> origin/master
+                </li>                
                 <li>
                     <a href="panico.php">Alerta de Pánico</a>
-                </li>
-                <li>
-                    <a href="botonpanico.php">Botones de panico</a>
                 </li>
                 <li>
                     <a href="#">Ayuda</a>
@@ -133,7 +115,7 @@
 
       function markers()  {
         $(document).ready(function(){
-              $("#div1").load("demo_test.php");
+              $("#div1").load("demo_test2.php");
         });      
       }
 

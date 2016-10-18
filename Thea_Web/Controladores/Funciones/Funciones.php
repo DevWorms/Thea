@@ -65,6 +65,7 @@
                                                 <h4><b>' . $fila["nombre_usuario"] . '</b></h4>
                                                 <p>Placas: ' . $fila["placas_usuario"] . '</p>
                                                 <p>
+<<<<<<< HEAD
                                                     Latitud: ' . $fila["latitud_usuario"] . '<br>
                                                     Longitud: ' . $fila["longitud_usuario"] . '<br>
                                                     Numero de pasajeros: ' . ($counter*3) . ' <br>
@@ -75,6 +76,13 @@
                                                     Calificacion: ' . "3 estrellas" . '
 
 
+=======
+                                                    Calificación: <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+
+                                                    <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+
+                                                    <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+>>>>>>> origin/master
                                                 </p>
                                                 <a href="mapa.php?lat=' . $fila["latitud_usuario"] . '&long=' . $fila["longitud_usuario"] . '" target=_blank>Mostrar en mapa</a>
                                               </div>
@@ -84,5 +92,50 @@
 
                     } 
         }
+
+        function Panico() {
+            global $pdo;
+
+            $operacion = "SELECT * FROM  usuarios";
+
+            $sentencia = $pdo->prepare($operacion);
+            $sentencia->execute();
+            $resultado = $sentencia->fetchAll();
+
+            $filas = $sentencia->rowCount();
+
+                if ($filas == 0) {
+                    echo "No hay sucursales registradas.";
+                } else {
+
+                        $counter = 0;
+                        foreach ($resultado as $fila )  {
+                            $counter++;
+
+
+                            if($fila["panico_usuario"] == 1)    {                             
+                            
+                                echo  '
+                                        <div class="card">
+                                          <img src="img_avatar.png" alt="Avatar" style="width:100%">
+                                          <div class="container">
+                                            <h4><b>' . $fila["nombre_usuario"] . '</b></h4>
+                                            <p>Placas: ' . $fila["placas_usuario"] . '</p>
+                                            <p>
+                                                Calificación: <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+
+                                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+
+                                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                            </p>
+                                            <a href="mapa.php?lat=' . $fila["latitud_usuario"] . '&long=' . $fila["longitud_usuario"] . '" target=_blank>Mostrar en mapa</a>
+                                          </div>
+                                        </div><br>';
+                            }
+                        }
+
+                    } 
+        }
+
 
 ?>

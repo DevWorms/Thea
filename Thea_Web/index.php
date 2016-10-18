@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+            
+                <li>
+                    <a href="panico.php">Alerta de Pánico</a>
+                </li><!DOCTYPE html>
 <html>
   
 <head>
@@ -41,6 +44,7 @@
                     <img src="logo.png">
                 </li>
                 <li>
+<<<<<<< HEAD
                     <a href="index.php">Mapa</a>
                 </li>
                 <li>
@@ -52,8 +56,18 @@
                 <li>
                     <a href="#">Estadisticas</a>
                 </li>
+=======
+                    <a href="ubicar.php">Ubicar Conductor</a>
+                </li>
                 <li>
-                    <a href="#">Camaras</a>
+                    <a href="#">Conversaciones</a>
+                </li>
+                <li>
+                    <a href="panel.php">Panel de Control</a>
+                </li>            
+>>>>>>> origin/master
+                <li>
+                    <a href="panico.php">Alerta de Pánico</a>
                 </li>
                 <li>
                     <a href="botonpanico.php">Botones de panico</a>
