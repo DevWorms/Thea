@@ -276,7 +276,7 @@ public class FragmentPosicion extends AppCompatActivity implements GoogleApiClie
             JSONParse jsp= new JSONParse();
 
             //String body= "{\r\n\"contrasena\": \""+txtPass.getText()+"\",\r\n\"telefono\": \""+txtTel.getText()+"\"\r\n}\r\n";
-            String body= "{\n\"id\" : \"3\",\n\"lat\" : \""+lat+"\",\n\"lon\" : \""+lon+"\"\n}";
+            String body= "{\n\"id\" : \"1\",\n\"lat\" : \""+lat+"\",\n\"lon\" : \""+lon+"\"\n}";
             String respuesta= jsp.makeHttpRequest("http://thea.devworms.com/api/usuarios/trackup","POST",body,"");
             Log.d("Respuesta : ", "> " + respuesta);
             if(respuesta!="error") {
